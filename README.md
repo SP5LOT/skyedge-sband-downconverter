@@ -6,7 +6,7 @@ Built for NASA's volunteer one-way Doppler tracking program.
 
 ## What it does
 
-Converts S-band signals (2195–2259 MHz) down to HF (0–64 MHz) for direct sampling by an RX-888 MKII SDR. A single fixed Local Oscillator at 2195.0 MHz, locked to a GPS-disciplined reference, provides sub-Hz frequency accuracy required for Doppler measurements.
+Converts S-band signals (2195-2259 MHz) down to HF (0-64 MHz) for direct sampling by an RX-888 MKII SDR. A single fixed Local Oscillator at 2195.0 MHz, locked to a GPS-disciplined reference, provides sub-Hz frequency accuracy required for Doppler measurements.
 
 ## Target frequencies
 
@@ -15,7 +15,7 @@ Converts S-band signals (2195–2259 MHz) down to HF (0–64 MHz) for direct sam
 | **Artemis II Orion** | 2216.5 MHz | 21.5 MHz | TDRS return link 1, primary target |
 | DSCOVR | 2215.0 MHz | 20.0 MHz | L1 point, always visible, good calibration source |
 | Coriolis | 2221.5 MHz | 26.5 MHz | LEO, 512 ksym/s |
-| GOES-15 / EWS-G2 | 2209.1 MHz | 14.1 MHz | GEO 61.5°E, carrier only |
+| GOES-15 / EWS-G2 | 2209.1 MHz | 14.1 MHz | GEO 61.5E, carrier only |
 | RPOD Orion | 2203.2 MHz | 8.2 MHz | Docking system |
 | Brite-PL 2 | 2234.4 MHz | 39.4 MHz | Polish satellite |
 | CHEOPS | 2208.5 MHz | 13.5 MHz | ESA, dumps to Europe |
@@ -26,17 +26,17 @@ Converts S-band signals (2195–2259 MHz) down to HF (0–64 MHz) for direct sam
 
 ```mermaid
 graph TD
-    GPSDO["GPSDO&lt;br/&gt;27 MHz"] --> SPLIT["SMA Splitter"]
-    SPLIT -->|"27 MHz ref"| ADF["ADF4351&lt;br/&gt;LO = 2195 MHz"]
+    GPSDO["GPSDO<br>27 MHz"] --> SPLIT["SMA Splitter"]
+    SPLIT -->|"27 MHz ref"| ADF["ADF4351<br>LO = 2195 MHz"]
     SPLIT -->|"27 MHz clk"| PAD["10 dB Pad + DC Block"]
-    PAD --> RX["RX-888 MKII&lt;br/&gt;EXT CLK"]
+    PAD --> RX["RX-888 MKII<br>EXT CLK"]
 
-    DISH["Dish 1.8-3m"] --> BPF["Cavity BPF&lt;br/&gt;2200-2290 MHz"]
-    BPF --> LNA["TQP3M9037 LNA&lt;br/&gt;NF 0.5 dB, +19 dB"]
-    LNA -->|"RF"| MIX["ZX05-43MH-S+&lt;br/&gt;Mixer"]
+    DISH["Dish 1.8-3m"] --> BPF["Cavity BPF<br>2200-2290 MHz"]
+    BPF --> LNA["TQP3M9037 LNA<br>NF 0.5 dB, +19 dB"]
+    LNA -->|"RF"| MIX["ZX05-43MH-S+<br>Mixer"]
     ADF -->|"LO +5 dBm"| MIX
-    MIX -->|"IF 0-64 MHz"| RXHF["RX-888 MKII&lt;br/&gt;HF Port"]
-    RXHF -->|"USB 3.0"| PC["PC&lt;br/&gt;SDR Console / GNU Radio"]
+    MIX -->|"IF 0-64 MHz"| RXHF["RX-888 MKII<br>HF Port"]
+    RXHF -->|"USB 3.0"| PC["PC<br>SDR Console / GNU Radio"]
 
     style GPSDO fill:#d4a017,stroke:#8b6914,color:#000
     style ADF fill:#c0392b,stroke:#922b21,color:#fff
