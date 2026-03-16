@@ -57,12 +57,12 @@ graph TD
 
 | Component | Model | Purpose | Est. cost |
 |---|---|---|---|
-| Mixer | Mini-Circuits ZX05-43MH-S+ | Passive downconversion | ~170 PLN |
-| DC block | Mini-Circuits BLK-89-S+ | Protect RX-888 clock input | ~60 PLN |
-| Attenuator | SMA 10 dB, 2W | Reduce GPSDO level for RX-888 | ~25 PLN |
-| SMA splitter | Resistive tee | Split GPSDO to ADF4351 + RX-888 | ~25 PLN |
-| SMA cables | Male-male, 15-20 cm x 4 | Interconnects | ~60 PLN |
-| **Total** | | | **~340 PLN** |
+| Mixer | Mini-Circuits ZX05-43MH-S+ | Passive downconversion | ~$42 |
+| DC block | Mini-Circuits BLK-89-S+ | Protect RX-888 clock input | ~$15 |
+| Attenuator | SMA 10 dB, 2W | Reduce GPSDO level for RX-888 | ~$6 |
+| SMA splitter | Resistive tee | Split GPSDO to ADF4351 + RX-888 | ~$6 |
+| SMA cables | Male-male, 15-20 cm x 4 | Interconnects | ~$15 |
+| **Total** | | | **~$85** |
 
 ### You already have
 
